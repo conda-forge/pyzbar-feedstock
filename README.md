@@ -121,4 +121,5 @@ Feedstock Maintainers
 
 * [@Ryan-Dmello](https://github.com/Ryan-Dmello/)
 * [@bollwyvl](https://github.com/bollwyvl/)
+* [@mrakitin](https://github.com/mrakitin/)
 
