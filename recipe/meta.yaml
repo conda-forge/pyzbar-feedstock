@@ -1,20 +1,20 @@
 {% set name = "pyzbar" %}
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 
 package:
-  name: "{{ name }}"
-  version: "{{ version }}"
+  name: {{ name }}
+  version: {{ version }}
 
 source:
   - folder: dist
     url: https://github.com/NaturalHistoryMuseum/{{ name }}/archive/v{{ version }}.tar.gz
-    sha256: f51c82c2864f8e5a8d44f55853e027f8cbc592324b7afffa62100f2f9c54cbdb
+    sha256: 6b84ec4c1f36df590c65b610a7757ef8829f202a7df210d2891e6592a8bee8bb
   - folder: src
     url: https://github.com/NaturalHistoryMuseum/pyzbar/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: f51c82c2864f8e5a8d44f55853e027f8cbc592324b7afffa62100f2f9c54cbdb
+    sha256: 6b84ec4c1f36df590c65b610a7757ef8829f202a7df210d2891e6592a8bee8bb
 
 build:
-  number: 1
+  number: 0
   script: cd dist && {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
