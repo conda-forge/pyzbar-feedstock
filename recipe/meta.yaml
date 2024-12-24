@@ -14,7 +14,7 @@ source:
     sha256: 6b84ec4c1f36df590c65b610a7757ef8829f202a7df210d2891e6592a8bee8bb
 
 build:
-  number: 0
+  number: 1
   script: cd dist && {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -22,10 +22,10 @@ build:
 
 requirements:
   host:
-    - python ==2.7.*|>=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python ==2.7.*|>=3.6
+    - python >={{ python_min }}
     - zbar
 
 test:
@@ -37,6 +37,7 @@ test:
     - pillow >=3.2.0
     - nose
     - coverage
+    - python {{ python_min }}
   imports:
     - pyzbar
   commands:
